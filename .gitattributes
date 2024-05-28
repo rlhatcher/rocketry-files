@@ -1,0 +1,11 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+*.blend filter=lfs diff=lfs merge=lfs -text
+*.f3d filter=lfs diff=lfs merge=lfs -text
+*.f3z filter=lfs diff=lfs merge=lfs -text
+*.afdesign filter=lfs diff=lfs merge=lfs -text
+*.xcf filter=lfs diff=lfs merge=lfs -text
+*.mix filter=lfs diff=lfs merge=lfs -text
+*.graffle filter=lfs diff=lfs merge=lfs -text
+*.lys filter=lfs diff=lfs merge=lfs -text
+*.pwmx filter=lfs diff=lfs merge=lfs -text
