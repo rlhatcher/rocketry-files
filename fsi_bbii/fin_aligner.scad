@@ -13,14 +13,14 @@
 
 // Parametric 
 
-tube_diameter	=	53.1 		;//mm measured tube outer diameter
-fin_width		=	6.2	;//mm measured fin width
-fin_number		=	3		;// Number of fins
-jig_height		=	40		;//mm height of jig
-jig_fin_width	=	50		;//mm width of jig fin holders
-wall_thickness	=	2		;//mm desired wall thickness
+tube_diameter	=	53  ;//mm measured tube outer diameter
+fin_width		=	6	;//mm measured fin width
+fin_number		=	3	;// Number of fins
+jig_height		=	40	;//mm height of jig
+jig_fin_width	=	50	;//mm width of jig fin holders
+wall_thickness	=	3	;//mm desired wall thickness
 
-brim_width = 15;
+brim_width = 10;
 
 glue_clearance	=	4		;//mm inner gap to prevent glue sticking to jig
 
