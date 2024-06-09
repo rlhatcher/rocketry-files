@@ -1,4 +1,4 @@
-# fat-boys
+# FSI 1/8 Scale Black Brant II
 
 These files are related to the documentation and construction of the FSI 1/8 scale Black Brant II kit.
 
