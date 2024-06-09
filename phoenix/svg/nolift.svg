@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="21.894257mm"
+   height="6.3999939mm"
+   viewBox="0 0 21.894257 6.3999939"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e, 2022-07-14)"
+   sodipodi:docname="phoenix.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.32921153"
+     inkscape:cx="1295.5196"
+     inkscape:cy="1274.2567"
+     inkscape:window-width="1720"
+     inkscape:window-height="1313"
+     inkscape:window-x="1720"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-159.20083,-41.36486)"
+     style="display:inline">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.20669px;line-height:1.25;font-family:'Vtg Stencil Marsh';-inkscape-font-specification:'Vtg Stencil Marsh, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.143855"
+       x="159.51273"
+       y="47.454006"
+       id="text520"
+       inkscape:export-filename="../../../../../../SynologyDrive/projects/rockets/phoenix/svg/nolift.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       transform="scale(0.99460029,1.005429)"><tspan
+         sodipodi:role="line"
+         id="tspan518"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.20669px;font-family:'Vtg Stencil US No72 W03 Alt';-inkscape-font-specification:'Vtg Stencil US No72 W03 Alt, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.143855"
+         x="159.51273"
+         y="47.454006">no lift</tspan></text>
+  </g>
+</svg>
