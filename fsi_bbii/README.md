@@ -10,7 +10,7 @@ These files are related to the documentation and construction of the FSI 1/8 sca
 
 * [decals](fsi_bbii_decal.jpg)
 * [fin guide](fsi_bbii_finguide.pdf)
-* [assemply guide](fsi_bbii_assembly.pdf)
+* [assembly guide](fsi_bbii_assembly.pdf)
 
 ### Kit Designs
 
