@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: rocketry-files
+  annotations:
+    github.com/project-slug: rlhatcher/rocketry-files
+spec:
+  type: other
+  lifecycle: unknown
+  owner: guests
