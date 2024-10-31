@@ -4,7 +4,8 @@ metadata:
   name: rocketry-files
   annotations:
     github.com/project-slug: rlhatcher/rocketry-files
+    backstage.io/adr-location: /docs/decisions
 spec:
-  type: other
+  type: website
   lifecycle: unknown
   owner: guests
