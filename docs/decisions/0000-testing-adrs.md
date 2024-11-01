@@ -1,3 +1,10 @@
+---
+status: proposed
+date: 2024-11-01
+deciders: ron
+consulted: also ron
+informed: ron
+---
 # Use Markdown Any Decision Records
 
 ## Context and Problem Statement
