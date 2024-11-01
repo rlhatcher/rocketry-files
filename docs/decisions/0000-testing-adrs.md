@@ -12,6 +12,10 @@ informed: ron
 We want to record any decisions made in this project independent whether decisions concern the architecture ("architectural decision record"), the code, or other fields.
 Which format and structure should these records follow?
 
+```plantuml
+Bob->Jane
+```
+
 ## Considered Options
 
 * [MADR](https://adr.github.io/madr/) 3.0.0 – The Markdown Any Decision Records
