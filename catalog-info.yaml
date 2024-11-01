@@ -7,5 +7,5 @@ metadata:
     backstage.io/adr-location: /docs/decisions
 spec:
   type: website
-  lifecycle: unknown
+  lifecycle: experimental
   owner: guests
