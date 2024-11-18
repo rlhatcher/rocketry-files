@@ -1,0 +1,25 @@
+@startuml
+' Import the C4-PlantUML library and all of the icons and sprites we need
+' !theme C4_thirdbridge from ./themes
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+!$ICONURL = "https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v3.0.0/icons"
+!include $ICONURL/common.puml
+!include $ICONURL/devicons2/nextjs.puml
+
+' Define sprites from Gilbarbara's collection
+!define SPRITESURL https://raw.githubusercontent.com/plantuml-stdlib/gilbarbara-plantuml-sprites/v1.1/sprites
+!include SPRITESURL/akamai.puml
+!include SPRITESURL/mariadb-icon.puml
+!include SPRITESURL/launchdarkly-icon.puml
+!include SPRITESURL/auth0-icon.puml
+!include SPRITESURL/aws-open-search.puml
+!include SPRITESURL/aws-api-gateway.puml
+!include SPRITESURL/aws-lambda.puml
+!include SPRITESURL/aws-sqs.puml
+!include SPRITESURL/aws-sns.puml
+!include SPRITESURL/symfony.puml
+!include SPRITESURL/ios.puml
+!include SPRITESURL/android-icon.puml
+!include SPRITESURL/react.puml
+@enduml
