@@ -1,7 +1,8 @@
 @startuml
 ' Import the C4-PlantUML library and all of the icons and sprites we need
 ' !theme C4_thirdbridge from ./themes
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+' !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!include <C4/C4_Container>
 
 !$ICONURL = "https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v3.0.0/icons"
 !include $ICONURL/common.puml
