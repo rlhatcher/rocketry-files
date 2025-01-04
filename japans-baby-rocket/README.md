@@ -37,3 +37,14 @@
 | tail-liner-booster   | PT2.5  | 55mm   |
 | tail-liner-sustainer | PT2.5  | 55mm   |
 | interstage           | PCT2.5 | 200mm  |
+
+### Hardware
+
+| part                 | size   | count |
+| -------------------- | ------ | ----- |
+| M4 lifting eye       | M4x10  | 3     |
+| M5 lifting eye       | M5x10  | 1     |
+| M5 eyebolt           | M5     | 1     |
+| M4 Nylock nut        | M4     | 3     |
+| M5 Connecting nut    | M5x15  | 1     |
+| M5 threaded rod      | M5x150 | 1     |
