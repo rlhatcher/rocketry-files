@@ -1,0 +1,14 @@
+Name,Unit,Expression,Value,Comments,Favorite
+BT55_ID,mm,32.6 mm,32.60,,false
+BT55_OD,mm,33.7 mm,33.70,,false
+BT50_OD,mm,24.8 mm,24.80,,false
+BT50_ID,mm,24.1 mm,24.10,,false
+FIN_Thickness,mm,3.18 mm,3.18,,false
+BT20_ID,mm,18 mm,18.00,,false
+BT20_OD,mm,19.1 mm,19.10,,false
+nc_len,mm,116 mm,116.00,,false
+nc_dia,mm,33.7 mm,33.70,,false
+nc_sh_dia,mm,31.4 mm,31.40,,false
+nc_sh_len,mm,28.9 mm,28.90,,false
+BTC50_OD,mm,24 mm,24.00,,false
+BTC50_ID,mm,23.1 mm,23.10,,false
