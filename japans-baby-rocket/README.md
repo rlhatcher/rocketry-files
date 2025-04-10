@@ -26,10 +26,20 @@
 
 ### Phenolic
 
+PT-3.0 X 1 (1000mm) £29.80
+PCT-3.0S x 1 (230mm) £8.91
+PT-2.5 x 1 (1000mm) £21.35
+PCT-2.5 x 1 (200mm) £5.25
+MMT-1.5 x 1 (300mm) £4.50
+
+£69.81
+£50.83 per unit in batches of 9
+
 | part                 |  size  | length |
 | -------------------- | ------ | ------ |
 | payload-section      | PT3.0  | 415mm  |
 | sustainer-body       | PT3.0  | 300mm  |
+| booster-body         | PT3.0  | 244mm  |
 | avbay-body           | PCT3.0 | 138mm  |
 | nosecone-shoulder    | PCT3.0 | 90mm   |
 | sustainer-mmt        | MT38   | 150mm  |
