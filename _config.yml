@@ -1,0 +1,50 @@
+title: Rocketry Files
+description: >-
+  Designs, simulations, build notes and flight data for Ron Hatcher's
+  model and high-power rockets.
+
+# GitHub Pages project site
+url: https://rlhatcher.github.io
+baseurl: /rocketry-files
+
+# Theme (pinned for reproducible builds)
+remote_theme: just-the-docs/just-the-docs@v0.12.0
+plugins:
+  - jekyll-remote-theme
+
+# just-the-docs options
+color_scheme: dark
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  rel_url: true
+back_to_top: true
+back_to_top_text: "Back to top"
+aux_links:
+  View on GitHub:
+    - https://github.com/rlhatcher/rocketry-files
+aux_links_new_tab: true
+
+# Style every page with the theme layout (so folder READMEs render too)
+defaults:
+  - scope: { path: "" }
+    values: { layout: default }
+
+# Keep editor/CAD sources and project-config files out of the built site.
+# (Source binaries live in Git LFS and would otherwise publish as broken pointers.)
+exclude:
+  - "*.afdesign"
+  - "*.xcf"
+  - "*.mix"
+  - "*.blend"
+  - "*.f3d"
+  - "*.f3z"
+  - "*.graffle"
+  - "*.lys"
+  - "*.pwmx"
+  - catalog-info.yaml
+  - README.md          # GitHub repo readme; site home is index.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
