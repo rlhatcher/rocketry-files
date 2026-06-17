@@ -1,0 +1,19 @@
+{%- comment -%}
+One file row for the repo table. Params: file (a static_file), label (display text).
+Served files download relative; LFS-stored sources link to GitHub raw. 👁 preview for
+3D models and PDFs (images are shown in the gallery instead).
+{%- endcomment -%}
+{%- assign f = include.file -%}
+{%- assign repo = "https://github.com/rlhatcher/rocketry-files" -%}
+{%- assign lfsext = ".f3d,.f3z,.blend,.afdesign,.xcf,.mix,.graffle,.lys,.pwmx" | split: "," -%}
+{%- assign threed = ".3mf,.stl,.step,.stp,.obj" | split: "," -%}
+{%- assign ext = f.extname | downcase -%}
+{%- assign enc = f.path | replace: " ", "%20" -%}
+{%- assign served = enc | relative_url -%}
+{%- if lfsext contains ext -%}{%- assign href = repo | append: "/blob/main" | append: enc | append: "?raw=true" -%}{%- else -%}{%- assign href = served -%}{%- endif -%}
+{%- assign typ = ext | remove_first: "." -%}
+  <tr>
+    <td class="name">{{ include.label }}</td>
+    <td class="type">{% if lfsext contains ext %}{{ typ }} · source{% else %}{{ typ }}{% endif %}</td>
+    <td class="act">{% if threed contains ext %}<button class="prev3d" data-src="{{ served }}" title="3D preview">👁</button> {% elsif ext == ".pdf" %}<a href="{{ served }}" target="_blank" rel="noopener" title="Open">👁</a> {% endif %}<a href="{{ href }}"{% unless lfsext contains ext %} download{% endunless %} title="Download">⬇</a></td>
+  </tr>

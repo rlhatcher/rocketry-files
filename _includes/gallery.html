@@ -1,0 +1,29 @@
+{%- comment -%}
+Lazy-loaded photo gallery: every raster image (png/jpg/jpeg/gif/webp) under this folder,
+recursively. SVGs are intentionally excluded (they stay as file rows). Skipped on root.
+Click a thumbnail to open the lightbox (handled in head_custom.html).
+{%- endcomment -%}
+{%- assign dir = include.dir | default: page.dir -%}
+{%- unless dir == "/" -%}
+{%- assign dlen = dir | size -%}
+{%- assign photoext = ".png,.jpg,.jpeg,.gif,.webp" | split: "," -%}
+{%- assign files = site.static_files | sort: "path" -%}
+{%- assign photos = "" -%}
+{%- for f in files -%}
+  {%- assign prefix = f.path | slice: 0, dlen -%}
+  {%- if prefix == dir -%}
+    {%- assign ext = f.extname | downcase -%}
+    {%- if photoext contains ext -%}{%- assign photos = photos | append: f.path | append: "|" -%}{%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if photos != "" -%}
+{%- assign plist = photos | split: "|" -%}
+<h2 class="photos-h">Photos</h2>
+<div class="gallery">
+{%- for p in plist -%}
+  {%- assign src = p | replace: " ", "%20" | relative_url -%}
+  <img class="gthumb" loading="lazy" src="{{ src }}" alt="{{ p | split: '/' | last }}">
+{%- endfor -%}
+</div>
+{%- endif -%}
+{%- endunless -%}
