@@ -16,7 +16,7 @@ Madcow 2.6" Black Brant II — simulations, fin-alignment jigs, charge wells and
 - [Fin_Aligner.scad](Fin_Aligner.scad)
 - [Fin_Aligner_harpoon_aft.scad](Fin_Aligner_harpoon_aft.scad)
 - [bb255diagram.pdf](bb255diagram.pdf)
-- [insert.stl](insert.stl)
+- [insert.stl](https://github.com/rlhatcher/rocketry-files/blob/main/big-bbii/insert.stl) (3D preview on GitHub)
 - [thrust-ring-template.scad](thrust-ring-template.scad)
 
 
