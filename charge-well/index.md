@@ -1,6 +1,7 @@
 ---
 title: Charge Well
 nav_order: 6
+viewer: true
 ---
 
 # Charge Well
@@ -17,5 +18,9 @@ Printable mk2 ejection charge well.
 - [charge well mk2 v7.png](charge%20well%20mk2%20v7.png)
 - [charge-well.3mf](charge-well.3mf)
 
+
+## 3D preview
+
+{% include viewer.html src="charge-well.3mf" %}
 
 [Browse all files on GitHub](https://github.com/rlhatcher/rocketry-files/tree/main/charge-well){: .btn }

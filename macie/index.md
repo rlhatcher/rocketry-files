@@ -1,6 +1,7 @@
 ---
 title: Macie XL
 nav_order: 2
+viewer: true
 ---
 
 # Macie XL
@@ -49,3 +50,9 @@ Files follow `maciexl-<flight>-<source>`:
 | `gr` | Trullock Grissom flight data |
 | `et` | Altus Metrum EasyTimer V2 |
 | `sl` | PerfectFlite StratoLogger |
+
+---
+
+## 3D preview
+
+{% include viewer.html src="fin_aligner.3mf" %}

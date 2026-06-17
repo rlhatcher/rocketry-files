@@ -1,0 +1,8 @@
+{% if page.viewer %}
+<script src="https://cdn.jsdelivr.net/npm/online-3d-viewer@0.18.0/build/engine/o3dv.min.js"></script>
+<script>
+  window.addEventListener('load', function () {
+    if (window.OV) { OV.Init3DViewerElements(); }
+  });
+</script>
+{% endif %}

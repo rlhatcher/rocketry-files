@@ -1,6 +1,7 @@
 ---
 title: Baby's First HPR
 nav_order: 4
+viewer: true
 ---
 
 # Baby's First HPR
@@ -23,5 +24,9 @@ Ron's first high-power rocket, based on the PK-72 Expediter — OpenRocket sim, 
 - [fin-slot-jig-02.jpeg](fin-slot-jig-02.jpeg)
 - [or-design.pdf](or-design.pdf)
 
+
+## 3D preview
+
+{% include viewer.html src="bfhpr-slot-jig.3mf" %}
 
 [Browse all files on GitHub](https://github.com/rlhatcher/rocketry-files/tree/main/bfhpr){: .btn }
