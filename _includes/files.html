@@ -1,0 +1,28 @@
+{%- comment -%}
+Auto-generated, complete list of every file in this project's folder.
+- Served files → direct download link (relative, on the site).
+- LFS-stored source files (CAD/editor) → GitHub link, since GitHub Pages
+  serves only the LFS pointer, not the binary.
+Optional param: dir (defaults to the current page's directory).
+{%- endcomment -%}
+{%- assign dir = include.dir | default: page.dir -%}
+{%- assign dlen = dir | size -%}
+{%- assign lfsext = ".f3d,.f3z,.blend,.afdesign,.xcf,.mix,.graffle,.lys,.pwmx" | split: "," -%}
+{%- assign files = site.static_files | sort: "path" -%}
+<ul class="project-files">
+{%- for f in files -%}
+{%- assign prefix = f.path | slice: 0, dlen -%}
+{%- if prefix == dir -%}
+{%- assign ext = f.extname | downcase -%}
+{%- unless ext == ".md" -%}
+{%- assign rel = f.path | remove_first: dir -%}
+{%- assign enc = f.path | replace: " ", "%20" -%}
+{%- if lfsext contains ext -%}
+  <li><a href="https://github.com/rlhatcher/rocketry-files/blob/main{{ enc }}?raw=true">{{ rel }}</a> <span class="text-grey-dk-000 fs-2">(source · GitHub)</span></li>
+{%- else -%}
+  <li><a href="{{ enc | relative_url }}" download>{{ rel }}</a></li>
+{%- endif -%}
+{%- endunless -%}
+{%- endif -%}
+{%- endfor -%}
+</ul>

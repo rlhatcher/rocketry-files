@@ -35,10 +35,7 @@ zoom to ascent.
 
 ## Files
 
-- OpenRocket simulations: [macie-xl.ork](macie-xl.ork), [macie.ork](macie.ork)
-- Flight data (raw): [browse on GitHub](https://github.com/rlhatcher/rocketry-files/tree/main/macie/flights/MRC%20Summer%2026)
-  — Grissom (`-gr`), StratoLogger (`-sl.pf2`), EasyTimer (`-et`), OpenRocket export (`-or`)
-- Fin alignment jig: [fin_aligner.scad](fin_aligner.scad), [fin_aligner.3mf](fin_aligner.3mf)
+{% include files.html %}
 
 ### Data source naming
 

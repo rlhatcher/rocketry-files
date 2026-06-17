@@ -8,4 +8,8 @@ nav_order: 7
 
 ---
 
+## Files
+
+{% include files.html %}
+
 [Browse all files for this project on GitHub](https://github.com/rlhatcher/rocketry-files/tree/main/fat-boys){: .btn }

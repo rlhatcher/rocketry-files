@@ -31,18 +31,10 @@ defaults:
   - scope: { path: "" }
     values: { layout: default }
 
-# Keep editor/CAD sources and project-config files out of the built site.
-# (Source binaries live in Git LFS and would otherwise publish as broken pointers.)
+# Project-config files that aren't site content.
+# (LFS-stored CAD/editor sources stay listed so the file index can find them;
+#  the files include links those to GitHub, since Pages can't serve LFS blobs.)
 exclude:
-  - "*.afdesign"
-  - "*.xcf"
-  - "*.mix"
-  - "*.blend"
-  - "*.f3d"
-  - "*.f3z"
-  - "*.graffle"
-  - "*.lys"
-  - "*.pwmx"
   - catalog-info.yaml
   - README.md          # GitHub repo readme; site home is index.md
   - Gemfile

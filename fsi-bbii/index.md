@@ -15,6 +15,8 @@ viewer: true
 
 {% include viewer.html src="fsi_bbii_model.step" %}
 
----
+## Files
+
+{% include files.html %}
 
 [Browse all files for this project on GitHub](https://github.com/rlhatcher/rocketry-files/tree/main/fsi-bbii){: .btn }

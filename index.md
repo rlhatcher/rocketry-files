@@ -31,7 +31,7 @@ tilt guide.
 | Project | About | |
 |---|---|---|
 | **Macie XL** | Single-stage HPR, flown twice (apogees ~2,765 ft & ~3,208 ft); two-stage variant planned | [Open →](macie/) |
-| **76mm Electronics Sled** | High-density 76mm electronics bay — 4× LiPo, 3× altimeters/timers, 4× switches | [Open →](76mm%20sled/) |
+| **76mm Electronics Sled** | High-density 76mm electronics bay — 4× LiPo, 3× altimeters/timers, 4× switches | [Open →](76mm-sled/) |
 | **Launch Tower** | Mostly-printed 1 m launch tower with swappable mounts for different body sizes | [Open →](tower/) |
 | **Baby Rocket Series** | Small PETG-printed rocket builds | [Open →](japans-baby-rocket/) |
 | **Tube Cutting Guides** | OpenSCAD-generated cutting guides for larger body tubes (BT-70 / BT-80) | [Open →](tube-cutting-guide/) |
