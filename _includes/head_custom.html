@@ -1,8 +1,63 @@
-{% if page.viewer %}
-<script src="https://cdn.jsdelivr.net/npm/online-3d-viewer@0.18.0/build/engine/o3dv.min.js"></script>
+<style>
+  .repo-breadcrumb { font-size: .9em; margin: 0 0 1rem; display: flex; flex-wrap: wrap; gap: .4rem; align-items: baseline; }
+  .repo-breadcrumb .sep { opacity: .5; }
+  .repo-breadcrumb .here { font-weight: 600; }
+  .repo-breadcrumb .gh { margin-left: auto; font-size: .85em; opacity: .8; }
+  .repo-table { width: 100%; border-collapse: collapse; margin: .25rem 0 1.5rem; }
+  .repo-table td { padding: .35rem .5rem; border-bottom: 1px solid var(--border-color, #2c2c2c); vertical-align: middle; }
+  .repo-table td.type { color: #8a8a8a; font-size: .8em; width: 7em; white-space: nowrap; }
+  .repo-table td.act { text-align: right; white-space: nowrap; width: 4.5em; }
+  .repo-table tr.dir td.name a { font-weight: 600; }
+  .repo-table .act a, .repo-table .act button { text-decoration: none; font-size: 1em; line-height: 1; }
+  .repo-table .act button { background: none; border: 0; cursor: pointer; padding: 0 .15em; color: inherit; }
+  .model-viewer-inline { width: 100%; height: 440px; border: 1px solid var(--border-color, #444); border-radius: 6px; margin: .3rem 0; }
+  .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.88); display: flex; align-items: center; justify-content: center; z-index: 1000; cursor: zoom-out; }
+  .lightbox img { max-width: 92vw; max-height: 92vh; box-shadow: 0 0 40px rgba(0,0,0,.6); }
+</style>
 <script>
-  window.addEventListener('load', function () {
-    if (window.OV) { OV.Init3DViewerElements(); }
-  });
+  (function () {
+    var ENGINE = "https://cdn.jsdelivr.net/npm/online-3d-viewer@0.18.0/build/engine/o3dv.min.js";
+    var loading = null;
+    function loadEngine() {
+      if (window.OV) return Promise.resolve();
+      if (loading) return loading;
+      loading = new Promise(function (resolve, reject) {
+        var s = document.createElement("script");
+        s.src = ENGINE; s.onload = resolve; s.onerror = reject;
+        document.head.appendChild(s);
+      });
+      return loading;
+    }
+    document.addEventListener("click", function (e) {
+      var t = e.target;
+      if (!t.closest) return;
+
+      var b = t.closest(".prev3d");
+      if (b) {
+        e.preventDefault();
+        var row = b.closest("tr");
+        var nxt = row.nextElementSibling;
+        if (nxt && nxt.classList.contains("viewer-row")) { nxt.remove(); return; }
+        var tr = document.createElement("tr"); tr.className = "viewer-row";
+        var td = document.createElement("td"); td.colSpan = 3;
+        var div = document.createElement("div"); div.className = "model-viewer-inline";
+        td.appendChild(div); tr.appendChild(td);
+        row.parentNode.insertBefore(tr, row.nextSibling);
+        loadEngine().then(function () {
+          var v = new OV.EmbeddedViewer(div, {});
+          v.LoadModelFromUrlList([b.dataset.src]);
+        }).catch(function () { td.textContent = "Could not load the 3D viewer."; });
+        return;
+      }
+
+      var i = t.closest(".previmg");
+      if (i) {
+        e.preventDefault();
+        var lb = document.createElement("div"); lb.className = "lightbox";
+        var img = document.createElement("img"); img.src = i.dataset.src; lb.appendChild(img);
+        lb.addEventListener("click", function () { lb.remove(); });
+        document.body.appendChild(lb);
+      }
+    });
+  })();
 </script>
-{% endif %}

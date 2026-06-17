@@ -1,0 +1,20 @@
+---
+layout: default
+---
+{%- assign repo = "https://github.com/rlhatcher/rocketry-files" -%}
+{%- assign dir = page.dir -%}
+<nav class="repo-breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ '/' | relative_url }}">rocketry-files</a>
+  {%- unless dir == "/" %}
+  {%- assign here = dir | remove_first: "/" | remove: "/" %}
+  <span class="sep">/</span> <span class="here">{{ here }}</span>
+  {%- assign ghpath = dir | replace: " ", "%20" %}
+  <a class="gh" href="{{ repo }}/tree/main{{ ghpath }}" target="_blank" rel="noopener">View on GitHub ↗</a>
+  {%- else %}
+  <a class="gh" href="{{ repo }}" target="_blank" rel="noopener">View on GitHub ↗</a>
+  {%- endunless %}
+</nav>
+
+{% include repo-table.html %}
+
+{{ content }}

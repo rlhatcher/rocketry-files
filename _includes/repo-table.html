@@ -1,0 +1,67 @@
+{%- comment -%}
+GitHub-style listing of one folder's immediate contents.
+  dirs  : at the repo root -> on-site project page (or GitHub if no page);
+          deeper -> GitHub tree.
+  files : type + actions. Download (served = relative, LFS source = GitHub raw)
+          and an optional lazy preview (3D / image / pdf).
+Param: dir (defaults to the current page's directory).
+{%- endcomment -%}
+{%- assign dir = include.dir | default: page.dir -%}
+{%- assign dlen = dir | size -%}
+{%- assign repo = "https://github.com/rlhatcher/rocketry-files" -%}
+{%- assign lfsext = ".f3d,.f3z,.blend,.afdesign,.xcf,.mix,.graffle,.lys,.pwmx" | split: "," -%}
+{%- assign threed = ".3mf,.stl,.step,.stp,.obj" | split: "," -%}
+{%- assign images = ".png,.jpg,.jpeg,.gif,.webp,.svg" | split: "," -%}
+{%- assign files = site.static_files | sort: "path" -%}
+{%- comment -%} immediate child directories {%- endcomment -%}
+{%- assign diracc = "" -%}
+{%- for f in files -%}
+  {%- assign prefix = f.path | slice: 0, dlen -%}
+  {%- if prefix == dir -%}
+    {%- assign rel = f.path | remove_first: dir -%}
+    {%- if rel contains "/" -%}
+      {%- assign seg = rel | split: "/" | first -%}
+      {%- comment -%} skip theme-generated output dirs, not repo content {%- endcomment -%}
+      {%- unless seg == "assets" -%}
+        {%- assign diracc = diracc | append: seg | append: "," -%}
+      {%- endunless -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign dirs = diracc | split: "," | uniq | sort -%}
+<table class="repo-table">
+<tbody>
+{%- for d in dirs -%}
+  {%- assign purl = "/" | append: d | append: "/" -%}
+  {%- if dir == "/" -%}
+    {%- assign ppage = site.pages | where: "url", purl | first -%}
+    {%- if ppage -%}{%- assign dhref = purl | relative_url -%}
+    {%- else -%}{%- assign dpath = "/" | append: d | replace: " ", "%20" -%}{%- assign dhref = repo | append: "/tree/main" | append: dpath -%}{%- endif -%}
+  {%- else -%}
+    {%- assign dpath = dir | append: d | replace: " ", "%20" -%}{%- assign dhref = repo | append: "/tree/main" | append: dpath -%}
+  {%- endif -%}
+  <tr class="dir"><td class="name"><a href="{{ dhref }}">📁 {{ d }}/</a></td><td class="type">dir</td><td class="act"></td></tr>
+{%- endfor -%}
+{%- for f in files -%}
+  {%- assign prefix = f.path | slice: 0, dlen -%}
+  {%- if prefix == dir -%}
+    {%- assign rel = f.path | remove_first: dir -%}
+    {%- unless rel contains "/" -%}
+      {%- assign ext = f.extname | downcase -%}
+      {%- unless ext == ".md" -%}
+        {%- assign enc = f.path | replace: " ", "%20" -%}
+        {%- assign served = enc | relative_url -%}
+        {%- if lfsext contains ext -%}{%- assign href = repo | append: "/blob/main" | append: enc | append: "?raw=true" -%}
+        {%- else -%}{%- assign href = served -%}{%- endif -%}
+        {%- assign typ = ext | remove_first: "." -%}
+  <tr>
+    <td class="name">{{ rel }}</td>
+    <td class="type">{% if lfsext contains ext %}{{ typ }} · source{% else %}{{ typ }}{% endif %}</td>
+    <td class="act">{% if threed contains ext %}<button class="prev3d" data-src="{{ served }}" title="3D preview">👁</button> {% elsif images contains ext %}<button class="previmg" data-src="{{ served }}" title="Preview">👁</button> {% elsif ext == ".pdf" %}<a href="{{ served }}" target="_blank" rel="noopener" title="Open">👁</a> {% endif %}<a href="{{ href }}"{% unless lfsext contains ext %} download{% endunless %} title="Download">⬇</a></td>
+  </tr>
+{%- endunless -%}
+    {%- endunless -%}
+  {%- endif -%}
+{%- endfor -%}
+</tbody>
+</table>
